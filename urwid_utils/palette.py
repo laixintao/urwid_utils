@@ -22,7 +22,7 @@ class PaletteEntry(list):
         for index, value in enumerate(args):
             key = self.attrs[index]
             kwargs[key] = value
-        for name, value in kwargs.iteritems():
+        for name, value in kwargs.items():
             self.__setattr__(name=name, value=value)
 
     def __repr__(self):
@@ -75,7 +75,7 @@ class Palette(list):
 
     def __init__(self, name=None, **entries):
         self.name = name
-        for name, entry in entries.iteritems():
+        for name, entry in entries.items():
             entry.name = name
         list.__init__(self, entries.values())
 

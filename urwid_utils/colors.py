@@ -11,4 +11,4 @@ STYLES = zip([n.upper() for n in STYLES], STYLES)
 color_const = get_const_identifiers(urwid.display_common, STYLES)
 color_const['STYLES'] = STYLES
 globals().update(color_const)
-__all__ = color_const.keys()
+__all__ = list(color_const.keys())
